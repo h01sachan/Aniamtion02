@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    
+    background-color: rgb(138, 39, 231);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.square div {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    animation: glowandrotate 4s linear infinite;
+    background: rgba(255,255,255,.5);
+    border-radius: 15px;
+}
+.square div:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    animation: glowandrotate 8s linear infinite;
+}
+.square div:nth-child(2) {
+    top: 26%;
+    left: 89%;
+    animation: glowandrotate 10s linear infinite;
+}
+.square div:nth-child(3) {
+    top: 80%;
+    left: 90%;
+    animation: glowandrotate 5s linear infinite;
+}
+.square div:nth-child(4) {
+    top: 65%;
+    left: 75%;
+    animation: glowandrotate 7s linear infinite;
+}
+.square div:nth-child(5) {
+    top: 90%;
+    left: 10%;
+    animation: glowandrotate 9s linear infinite;
+}
+.square div:nth-child(6) {
+    top: 30%;
+    left: 60%;
+    animation: glowandrotate 5s linear infinite;
+}
+.square div:nth-child(7) {
+    top: 70%;
+    left: 33%;
+    animation: glowandrotate 8s linear infinite;
+}
+.square div:nth-child(8) {
+    top: 75%;
+    left: 60%;
+    animation: glowandrotate 10s linear infinite;
+}   
+.square div:nth-child(9) {
+    top: 23%;
+    left: 50%;
+    animation: glowandrotate 6s linear infinite;
+}
+.square div:nth-child(10) {
+    top: 35%;
+    left: 7%;
+    animation: glowandrotate 10s linear infinite;
+}   
+
+@keyframes glowandrotate {
+    0% {
+    transform: scale(0) translateY(0) rotate(50deg);
+    }
+    100% {
+    transform: scale(1.6) translateY(-250px) rotate(360deg);
+    }
+}
