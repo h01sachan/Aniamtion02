@@ -3,8 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    
+body 
+{
     background-color: rgb(138, 39, 231);
     display: flex;
     justify-content: center;
@@ -12,65 +12,70 @@ body {
     height: 100vh;
     width: 100%;
 }
-.square div {
+#square div {
     height: 60px;
     width: 60px;
     position: absolute;
+    /*fixed and absolute both works fine here but relative positioned wrt to current*/
     top: 10%;
     left: 10%;
-    animation: glowandrotate 4s linear infinite;
-    background: rgba(255,255,255,.5);
+    background: rgba(149, 231, 139, 0.945);
     border-radius: 15px;
+    z-index: -1;
 }
-.square div:nth-child(1) {
-    top: 20%;
+#square div:nth-child(1) {
+    top: 20px;
     left: 20%;
-    animation: glowandrotate 8s linear infinite;
+    background: rgba(214, 85, 46, 0.945);
+    
+    
 }
-.square div:nth-child(2) {
+#square div:nth-child(2) {
+    z-index: -1;
     top: 26%;
     left: 89%;
-    animation: glowandrotate 10s linear infinite;
+    background: rgba(179, 241, 79, 0.945);
+    
 }
-.square div:nth-child(3) {
+#square div:nth-child(3) {
     top: 80%;
     left: 90%;
-    animation: glowandrotate 5s linear infinite;
+    background: rgba(226, 116, 26, 0.945);
 }
-.square div:nth-child(4) {
+#square div:nth-child(4) {
     top: 65%;
     left: 75%;
-    animation: glowandrotate 7s linear infinite;
+    background: rgba(215, 255, 107, 0.945);
 }
-.square div:nth-child(5) {
+#square div:nth-child(5) {
     top: 90%;
     left: 10%;
-    animation: glowandrotate 9s linear infinite;
+    background: rgba(245, 49, 131, 0.945);
 }
-.square div:nth-child(6) {
+#square div:nth-child(6) {
     top: 30%;
     left: 60%;
-    animation: glowandrotate 5s linear infinite;
+    background: rgba(230, 127, 109, 0.945);
 }
-.square div:nth-child(7) {
+#square div:nth-child(7) {
     top: 70%;
     left: 33%;
-    animation: glowandrotate 8s linear infinite;
+    background: rgba(104, 172, 87, 0.945);
 }
-.square div:nth-child(8) {
+#square div:nth-child(8) {
     top: 75%;
     left: 60%;
-    animation: glowandrotate 10s linear infinite;
+    background: rgba(243, 3, 123, 0.945);
 }   
-.square div:nth-child(9) {
+#square div:nth-child(9) {
     top: 23%;
     left: 50%;
-    animation: glowandrotate 6s linear infinite;
+    background: rgba(253, 70, 208, 0.945);
 }
-.square div:nth-child(10) {
+#square div:nth-child(10) {
     top: 35%;
     left: 7%;
-    animation: glowandrotate 10s linear infinite;
+    background: rgba(230, 148, 42, 0.945);
 }
 .facelayout {
     width: 200px;
@@ -79,18 +84,18 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    animation: blinkk 3s infinite 4s;
+    animation: blinkk 2s infinite;
 }
 
 .bossofeyes {
     width: 200px;
-    height: 60px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.eyes {
+#eyes {
     width: 50px;
     height: 50px;
     background-color: rgb(248, 223, 82);
@@ -104,6 +109,7 @@ body {
     height: 10px;
     background-color: #fff;
     border-radius: 50%;
+    /*here due to single eyelid absolute fixed relative all work same*/
     position: absolute;
     top: 50%;
     left: 50%;
@@ -113,7 +119,7 @@ body {
 .pupil {
     width: 30px;
     height: 30px;
-    background-color: #000;
+    background-color: rgb(17, 3, 3);
     border-radius: 50%;
     position: relative;
 }
@@ -139,15 +145,15 @@ body {
     bottom: -15px;
     left: 10px;
 }   
-
+/*
 @keyframes glowandrotate {
     0% {
     transform: scale(0) translateY(0) rotate(50deg);
     }
     100% {
-    transform: scale(1.6) translateY(-250px) rotate(360deg);
+    transform: scale(1.6) translateY(-300px) rotate(360deg);
     }
-}
+}*/
 @keyframes blink {
     0% {
         height: 50px;
@@ -168,9 +174,9 @@ body {
 
 @keyframes blinkk {
     0% {
-        height: 10px;
+        height: 20px;
     }
     100% {
-        height: 150px;
+        height: 140px;
     }
 }
